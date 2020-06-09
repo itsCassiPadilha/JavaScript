@@ -14,7 +14,7 @@ function Stack() {
 
 /**
  * Removes the top item from the stack.
- * @returns {any} The removed item.
+ * @returns {*} The removed item.
  */
 Stack.prototype.Pop = function() {
 	let poppedItem = undefined;
@@ -36,7 +36,7 @@ Stack.prototype.Pop = function() {
 
 /**
  * Adds an item to the top of the stack.
- * @param {any} item The item to be added to the top of the stack. It will not be added to the stack should it be undefined or null.
+ * @param {*} item The item to be added to the top of the stack. It will not be added to the stack should it be undefined or null.
  * @returns {number} The size of the stack, how many items it currently has.
  */
 Stack.prototype.Push = function(item) {
