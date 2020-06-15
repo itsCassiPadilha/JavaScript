@@ -1,1 +1,5 @@
+!**/.yarn/releases
+!**/.yarn/plugins
+**/.yarn/*
+**/.pnp.*
 **/out/

@@ -1,0 +1,9 @@
+{
+  "name": "stacks",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
