@@ -1,3 +1,5 @@
+'use strict';
+
 const Stack = require('../StackCB');
 
 let stack;
