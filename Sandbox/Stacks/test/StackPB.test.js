@@ -16,6 +16,32 @@ describe('Newly created Stack', () => {
 	test('Push() should return 0', () => expect(stack.Push()).toBe(0));
 
 	test('Top() should return undefined', () => expect(stack.Top()).toBeUndefined());
+
+	test('IsEmpty should be read-only', () => {
+		let errorName;
+
+		try {
+			stack.IsEmpty = false;
+
+		} catch (error) {
+			errorName = error;
+		}
+
+		expect(errorName instanceof TypeError).toBe(true);
+	});
+
+	test('Length should be read-only', () => {
+		let errorName;
+
+		try {
+			stack.Length = -1;
+
+		} catch (error) {
+			errorName = error;
+		}
+
+		expect(errorName instanceof TypeError).toBe(true);
+	});
 });
 
 describe('Loaded Stack', () => {

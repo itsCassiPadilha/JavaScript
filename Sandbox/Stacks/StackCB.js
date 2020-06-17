@@ -7,9 +7,16 @@
 class Stack {
 	#index = 0;
 	#stack = [];
+	#isEmpty = true;
+	#length = 0;
 
-	IsEmpty = true;
-	Length = 0;
+	get IsEmpty() {
+		return this.#isEmpty;
+	}
+
+	get Length() {
+		return this.#length;
+	}
 
 	/**
 	 * Removes the top item from the stack.
@@ -23,9 +30,9 @@ class Stack {
 
 			this.#stack.length = this.#index;
 
-			this.IsEmpty = this.#index === 0;
+			this.#isEmpty = this.#index === 0;
 
-			this.Length = this.#index;
+			this.#length = this.#index;
 
 			poppedItem = item;
 		}
@@ -44,10 +51,10 @@ class Stack {
 
 			this.#stack[this.#index++] = item;
 
-			this.IsEmpty = this.#index === 0;
+			this.#isEmpty = this.#index === 0;
 		}
 
-		return this.Length = this.#stack.length;
+		return this.#length = this.#stack.length;
 	}
 
 	/**

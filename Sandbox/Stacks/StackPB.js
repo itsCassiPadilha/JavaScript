@@ -7,9 +7,18 @@
 function Stack() {
 	this.index = 0;
 	this.stack = [];
+	this.isEmpty = true;
+	this.length = 0;
+}
 
-	this.IsEmpty = true;
-	this.Length = 0;
+Stack.prototype = {
+	get IsEmpty() {
+		return this.isEmpty;
+	},
+
+	get Length() {
+		return this.length;
+	}
 }
 
 /**
@@ -24,9 +33,9 @@ Stack.prototype.Pop = function() {
 
 		this.stack.length = this.index;
 
-		this.IsEmpty = this.index === 0;
+		this.isEmpty = this.index === 0;
 
-		this.Length = this.index;
+		this.length = this.index;
 
 		poppedItem = item;
 	}
@@ -45,10 +54,10 @@ Stack.prototype.Push = function(item) {
 
 		this.stack[this.index++] = item;
 
-		this.IsEmpty = this.index === 0;
+		this.isEmpty = this.index === 0;
 	}
 
-	return this.Length = this.stack.length;
+	return this.length = this.stack.length;
 };
 
 /**
