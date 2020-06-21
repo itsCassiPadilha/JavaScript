@@ -6,9 +6,9 @@
  */
 class Stack {
 	#index = 0;
-	#stack = [];
 	#isEmpty = true;
 	#length = 0;
+	#stack = [];
 
 	get IsEmpty() {
 		return this.#isEmpty;

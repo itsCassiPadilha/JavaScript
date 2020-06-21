@@ -6,9 +6,9 @@
  */
 function Stack() {
 	this.index = 0;
-	this.stack = [];
 	this.isEmpty = true;
 	this.length = 0;
+	this.stack = [];
 }
 
 Stack.prototype = {
